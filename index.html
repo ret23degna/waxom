@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <meta charset="utf-8">
+	    <link rel="stylesheet" type="text/css" href="style.css">
+	    <!--Стили-->
+	    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400|Raleway:400,500,600,700,800|Roboto&display=swap" rel="stylesheet">
+        <!--Слайдер-->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <!--Иконки в сайт бар-->
+	    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <title>Waxom</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!--jquery-->
+    </head>
+    <body>
+    	<!--Sprite-->
+        <svg style="display: none;" >
+            <symbol id="pen" viewBox="0 0 49 49">
+                <g transform="translate(0.000000,49.000000) scale(0.100000,-0.100000)">
+	                <path d="M223 408 c-64 -65 -77 -86 -123 -193 -29 -66 -61 -139 -71 -162 l-18
+                    -42 77 34 c257 111 249 106 323 181 45 45 69 76 64 84 -5 8 -32 -12 -84 -62
+                    -64 -63 -91 -81 -174 -118 -90 -40 -99 -42 -114 -27 -15 15 -13 24 27 114 37
+                    82 55 110 117 174 64 65 78 89 54 89 -4 0 -39 -33 -78 -72z"/>
+                    <path d="M272 357 c-40 -40 -69 -76 -65 -80 7 -8 153 131 153 145 0 18 -20 4
+                    -88 -65z"/>
+                    <path d="M310 325 c-41 -41 -71 -78 -67 -82 4 -4 42 27 84 69 41 41 71 78 66
+                    81 -5 3 -43 -27 -83 -68z"/>
+                    <path d="M342 287 c-40 -40 -69 -76 -65 -80 7 -8 153 131 153 145 0 18 -20 4
+                    -88 -65z"/>
+                </g>
+            </symbol>
+        </svg>
+        <svg style="display: none;" >
+        	<g transform="translate(0.000000,40.000000) scale(0.100000,-0.100000)"
+            <symbol id="book" viewBox="0 0 44 40">
+                <path d="M120 339 c-52 -28 -96 -52 -98 -54 -4 -4 185 -105 197 -105 5 0 53
+                23 105 52 l96 51 -97 53 c-54 30 -100 53 -103 54 -3 0 -48 -23 -100 -51z"/>
+                <path d="M30 210 c-8 -5 21 -25 83 -59 52 -28 99 -51 105 -51 7 0 55 23 108
+                51 65 35 92 54 83 60 -8 5 -46 -10 -101 -39 l-89 -47 -88 47 c-53 27 -93 43
+                -101 38z"/>
+                <path d="M30 130 c-8 -5 21 -25 83 -59 52 -28 99 -51 105 -51 7 0 55 23 108
+                51 65 35 92 54 83 60 -8 5 -46 -10 -101 -39 l-89 -47 -88 47 c-53 27 -93 43
+                -101 38z"/>                
+            </symbol>
+        </g>
+        </svg>
+        <svg style="display: none;" >
+        	<g transform="translate(0.000000,40.000000) scale(0.100000,-0.100000)"
+            <symbol id="sher" viewBox="0 0 44 44">
+               <path d="M190 418 c-11 -12 -20 -25 -20 -29 0  -5 -24 -9 -52 -11 l-53 -3 -1
+                -40 c-1 -59 -2 -61 -29 -73 -34 -16 -33 -54 2 -80 23 -17 27 -27 28 -68 l0
+                -49 48 0 c41 0 52 -4 69 -27 18 -26 67 -40 68 -20 0 4 7 16 16 27 11 15 27 20
+                62 20 l47 0 3 52 c2 29 6 53 11 53 11 0 51 39 51 51 0 6 -13 22 -29 37 -23 21
+                -30 37 -33 72 l-3 45 -45 3 c-35 3 -51 10 -72 33 -32 35 -41 36 -68 7z m87
+                -140 c50 -47 12 -138 -57 -138 -41 0 -80 39 -80 80 0 68 87 105 137 58z"/>              
+            </symbol>
+        </g>
+        </svg>
+        <svg style="display: none;" >
+        	<g transform="translate(0.000000,36.000000) scale(0.100000,-0.100000)"
+            <symbol id="ruk" viewBox="0 0 52 36">
+                <path d="M144 325 c-5 -22 -12 -24 -67 -27 l-62 -3 -2 -110 -2 -110 45 88 c32
+                62 52 91 70 97 14 6 84 10 155 10 100 0 130 3 127 13 -3 7 -28 13 -67 15 -55
+                3 -63 6 -71 27 -9 22 -15 25 -65 25 -50 0 -55 -2 -61 -25z m106 -10 c0 -11
+                -12 -15 -45 -15 -33 0 -45 4 -45 15 0 11 12 15 45 15 33 0 45 -4 45 -15z"/>
+                <path d="M127 228 c-15 -12 -107 -199 -107 -219 0 -10 348 -13 375 -3 17 7
+                115 193 115 219 0 13 -26 15 -183 15 -131 0 -188 -4 -200 -12z"/>
+            </g>               
+            </symbol>
+        </g>
+        </svg>
+        <svg style="display: none;">
+       	    <symbol id='link'  viewBox="0 0 512 512">
+       		    <path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path>
+       		</symbol>
+        </svg>
+        <svg style="display: none;"> 
+            <symbol id='search'viewBox="0 0 512 512"> 
+           	    <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path> 	 
+           	</symbol>
+        </svg>
+
+
+        <!--Header-->
+        <header class="header">
+	        <div class="container">
+		        <div class="header__inner">
+		            <div class="header__logo"> 
+			            <img  src="images/logo.png">        
+			            <div class="header__logo__name">Waxom</div>
+			        </div>		 
+			        <nav class="header__nav">
+				        <a class="header__nav__link" href="#">Home</a>
+				        <a class="header__nav__link" href="#">About Us</a>
+				        <a class="header__nav__link" href="#">Portfolio</a>
+				        <a class="header__nav__link" href="#">Features</a>
+				        <a class="header__nav__link" href="#">Blog</a>
+				        <a class="header__nav__link" href="#">Pricing</a>
+				        <a class="header__nav__link" href="#">Shortcodes</a>
+				        <a class="header__nav__link" href="#">Contact</a>
+			        </nav>
+			        <div class="header__link__icon">
+                        <a class="header__nav__link icon" href="#">   <i class="fas fa-shopping-bag"></i>
+                        </a>
+                        <a class="header__nav__link icon" href="#">   <i class="fas fa-search"></i>
+                        </a>
+                    </div>
+		        </div>
+	        </div>
+        </header>
+
+        <!--Intro-->
+        <div class="intro">
+	        <div class="container">
+	        	<div class="intro__inner" >
+                    <div id="reviewsSlider">
+                        <div>
+	        	    <h2 class="intro__title__first">
+	        	    Unique and Modern Design	
+	        	    </h2>
+	        	    <h1 class="intro__title__second">
+	        		Portfolio PSD Template
+	        	    </h1>
+	        	    <h3 class="intro__subtitle">
+	        		Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+	        	    </h3>
+	        	    <button class="intro__button" href="#">
+	        	    Get Started 
+	        	    </button>
+                    </div>
+                    <div>
+                    <h2 class="intro__title__first">
+                    Unique and Modern Design    
+                    </h2>
+                    <h1 class="intro__title__second">
+                    Portfolio PSD kek Template
+                    </h1>
+                    <h3 class="intro__subtitle">
+                    Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+                    </h3>
+                    <button class="intro__button" href="#">
+                    Get Started 
+                    </button>
+                    </div>
+                    </div>
+	        	</div>
+	        </div>
+        </div>
+
+        <!--Blbl-->
+        <div class="blbl">
+        	<div class="container">
+        		<div class="blbl__center">
+        		    <div class="blbl__atom">
+        			    <svg class='blbl__img'>
+        			    	<use xlink:href="#pen"></use>
+        			    </svg>
+        			    <h2 class='blbl__title'>Web & App Design</h2>
+        			    <h3 class='blbl__text'>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</h3>
+        		    </div>
+        		    <div class="blbl__atom">
+        			    <svg class='blbl__img'>
+        			    	<use xlink:href="#book"></use>
+        			    </svg>
+        			    <h2 class='blbl__title'>Development</h2>
+        			    <h3 class='blbl__text'>Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</h3>
+        		    </div>
+        		    <div class="blbl__atom">
+        			    <svg class='blbl__img'>
+        			    	<use xlink:href="#sher"></use>
+        			    </svg>
+        			    <h2 class='blbl__title'>Customization</h2>
+        			    <h3 class='blbl__text'>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</h3>
+        		    </div>
+        		    <div class="blbl__atom">
+        			    <svg class='blbl__img'>
+        			    	<use xlink:href="#ruk"></use>
+        			    </svg>
+        			    <h2 class='blbl__title'>Marketing</h2>
+        			    <h3 class='blbl__text'>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</h3>
+        		    </div>
+        	    </div>
+        	</div>
+        </div>
+
+        <!--Ideas-->
+        <div class="ideas">
+        	<div class="container">
+        		<div class="ideas__inner">
+        		    <h1 class="ideas__title">Waxom is Realization of your Ideas.</h1>
+        		    <h2 class="ideas__text">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</h2>
+        		</div>
+                <div class="ideas__cor">
+        		    <div class="ideas__atom1">
+                        <img class="ideas__img1" src="images/ideas/1.jpg">
+                    </div>               
+                    <div class="ideas__atom2">
+                        <img class="ideas__img2" src="images/ideas/2.jpg">
+                    </div>                   
+                    <div class="ideas__atom3">
+                        <img class="ideas__img3" src="images/ideas/3.jpg">
+                     </div>
+        		
+        		</div>
+        	</div>
+        </div>
+
+        <!--Braun-->
+        <div class="braun">
+        	<div class="container">
+        		<div class="braun__inner">
+        		    <div class="braun__logo">
+        		  	    <h1 class="braun__title">
+        		  	        <span class="braun__title__W">Waxom</span>
+        		  	        Multipurpose WordPress Theme	
+        		  	    </h1>
+        		  	    <h2 class="braun__text">
+        		  	        Don't Forget to Rate the Template. Thanks so much!	
+        		  	    </h2>
+                    </div>	
+        		    <div class="braun__button">
+        			    <button class="braun_but">
+	        	        Purchase Now
+	        	        </button>
+        		    </div>
+        		</div>
+        	</div>        	
+        </div>
+        
+        <!--Project-->
+        <div class="project">
+        	<div class="container">
+                <div class="project__inner">
+                	<div class="project__name">
+                 	    <h1 class="project__title">Our Latest Projects</h1>
+                 	    <h2 class="project__text">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</h2>
+                 	</div>
+                 	<div class="project__ssilki">
+                 		<button class="project__ssilki__but">
+	        	        All
+                        </button>
+	        	        <button class="project__ssilki__but">
+	        	        Web Design
+	        	        </button>
+	        	        <button class="project__ssilki__but">
+	        	        Mobile App
+	        	        </button>
+	        	        <button class="project__ssilki__but">
+	        	        Illustration
+	        	        </button>
+	        	        <button class="project__ssilki__but">
+	        	        Photography
+	        	        </button>
+                 	</div>
+                 	<div class="project__room">
+                 	    <div class="project__atom">
+                 		    <img class="project__atom__img" src="images/project/photo_1.png">
+                 		    <div class="project__atom__filter"></div>
+                 		    <a href="">
+                 		        <svg class='project__icon  project__icon--link'>
+        			    	        <use xlink:href="#link"></use>
+        			            </svg>
+        			        </a>
+        			        <a href="">
+        			            <svg class='project__icon project__icon--search'>
+        			    	    <use xlink:href="#search"></use>
+        			    	    </svg>
+        			    	</a>
+                 		    <div class="project__atom__block">
+                 			    <h2 class="project__atom__title">Claritas Etiam Processus</h2>
+                 			    <h3 class="project__atom__text">Photography, Nature</h3>
+                 		    </div>                 		
+                 	    </div>
+                 	    <div class="project__atom">
+                 		    <img class="project__atom__img" src="images/project/photo_2.png">
+                 		    <div class="project__atom__filter"></div>
+                 		    <a href="">
+                 		        <svg class='project__icon  project__icon--link'>
+        			    	        <use xlink:href="#link"></use>
+        			            </svg>
+        			        </a>
+        			        <a href="">
+        			            <svg class='project__icon project__icon--search'>
+        			    	    <use xlink:href="#search"></use>
+        			    	    </svg>
+        			    	</a>
+                 		    <div class="project__atom__block">
+                 			    <h2 class="project__atom__title">Quam Nutamus Farum</h2>
+                 			    <h3 class="project__atom__text">Graphic Design, Mock-Up</h3>
+                 		    </div>
+                 	    </div>
+                 	    <div class="project__atom">
+                 		    <img class="project__atom__img" src="images/project/photo_3.png">
+                 		    <div class="project__atom__filter"></div>
+                 		    <a href="">
+                 		        <svg class='project__icon  project__icon--link'>
+        			    	        <use xlink:href="#link"></use>
+        			            </svg>
+        			        </a>
+        			        <a href="">
+        			            <svg class='project__icon project__icon--search'>
+        			    	    <use xlink:href="#search"></use>
+        			    	    </svg>
+        			    	</a>
+                 		    <div class="project__atom__block">
+                 			   <h2 class="project__atom__title">Usus Legentis Videntur</h2>
+                 			   <h3 class="project__atom__text">Photography, Nature</h3>
+                 		    </div>
+                 	    </div>
+                 	    <div class="project__atom">
+                 		    <img class="project__atom__img" src="images/project/photo_4.png">
+                 		    <div class="project__atom__filter"></div>
+                 		    <a href="">
+                 		        <svg class='project__icon  project__icon--link'>
+        			    	        <use xlink:href="#link"></use>
+        			            </svg>
+        			        </a>
+        			        <a href="">
+        			            <svg class='project__icon project__icon--search'>
+        			    	    <use xlink:href="#search"></use>
+        			    	    </svg>
+        			    	</a>
+                 		    <div class="project__atom__block">
+                 			    <h2 class="project__atom__title">Claritas Etiam Processus</h2>
+                 			    <h3 class="project__atom__text">Photography, Nature</h3>
+                 		    </div>
+                 	    </div>
+                 	    <div class="project__atom">
+                 		    <img class="project__atom__img" src="images/project/photo_5.png">
+                 		    <div class="project__atom__filter"></div>
+                 		    <a href="">
+                 		        <svg class='project__icon  project__icon--link'>
+        			    	        <use xlink:href="#link"></use>
+        			            </svg>
+        			        </a>
+        			        <a href="">
+        			            <svg class='project__icon project__icon--search'>
+        			    	    <use xlink:href="#search"></use>
+        			    	    </svg>
+        			    	</a>
+                 		    <div class="project__atom__block">
+                 			    <h2 class="project__atom__title">Quam Nutamus Farum</h2>
+                 			    <h3 class="project__atom__text">Graphic Design, Mock-Up</h3>
+                 		    </div>
+                 	    </div>
+                 	    <div class="project__atom">
+                 		    <img class="project__atom__img" src="images/project/photo_6.png">
+                 		    <div class="project__atom__filter"></div>
+                 		    <a href="">
+                 		        <svg class='project__icon  project__icon--link'>
+        			    	        <use xlink:href="#link"></use>
+        			            </svg>
+        			        </a>
+        			        <a href="">
+        			            <svg class='project__icon project__icon--search'>
+        			    	    <use xlink:href="#search"></use>
+        			    	    </svg>
+        			    	</a>
+                 		    <div class="project__atom__block">
+                 			   <h2 class="project__atom__title">Usus Legentis Videntur</h2>
+                 			   <h3 class="project__atom__text">Photography, Nature</h3>
+                 		    </div>
+                 	    </div>
+                 	</div>
+                 	<div class="project_button">
+                 	    <button class="project_but">
+                 	    Load More
+                        </button>
+                    </div>
+                </div> 		
+        	</div> 
+        </div>
+
+        <!--Video-->
+        <div class="video">
+        	<div class="video__img">
+        		<div class="video__circle"></div>
+        		<img class="video__icon"src="images/icon-play.png">
+        	</div>
+        	<div class="video__name">
+        		<h1 class="video__title">Waxom Video Presentation</h1>
+        		<h2 class="video__text">nvestigationes demonstraverunt lectores legere me lius quod ii legunt saepius, qui sequitur mutationem consuetudium.</h2>
+                <h3 class="video__time">03:26</h3>
+        	</div>
+        </div>
+
+        <!--Devices-->
+        <div class="devices">
+        	<div class="container">
+        		<div class="devices__inner">
+        			<div class="devices__iphone">
+        				<img class="devices__img" src="images/devices/i.png">
+        			</div>
+        			<div class="devices__name">
+        				<h1 class="devices__title">Excellent for Mobile Devices.</h1>
+        				<h2 class="devices__text">Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.Excellent for Mobile Devices.</h2>
+        				<ul class="devices__list">
+        					<li class="devices__item">Nam liber tempor cum soluta nobis eleifend option;</li>
+        					<li class="devices__item">Option congue nihil imperdiet doming id quod mazim placerat facer;</li>
+        					<li class="devices__item">Eodem modo typi, qui nunc nobis videntur parum futurum;</li>
+        					<li class="devices__item">Investigationes demonstraverunt lectores</li>
+        				</ul>
+        			</div>        			
+        		</div>
+        	</div>        	
+        </div>
+        
+        <!--Coffee-->
+        <div class="coffee">
+        	<div class="container">
+        		<div class="coffee__inner">
+        			<div class="coffee__item">
+        				<img class="coffee__img" src="images/coffee/1.png">
+                        <h1 class="coffee__numeral">3587</h1>
+                        <h2 class="coffee__text">Satisfied Clients</h2>
+        			</div>
+        			<div class="coffee__item">
+        				<img class="coffee__img" src="images/coffee/2.png">
+                        <h1 class="coffee__numeral">207</h1>
+                        <h2 class="coffee__text">Cups of coffee</h2>
+        			</div>
+        			<div class="coffee__item">
+        				<img class="coffee__img" src="images/coffee/3.png">
+                        <h1 class="coffee__numeral">2500</h1>
+                        <h2 class="coffee__text">Blog posts</h2>
+        			</div>
+        			<div class="coffee__item">
+        				<img class="coffee__img" src="images/coffee/4.png">
+                        <h1 class="coffee__numeral">873</h1>
+                        <h2 class="coffee__text">Likes</h2>
+        			</div>
+        			<div class="coffee__item">
+        				<img class="coffee__img" src="images/coffee/5.png">
+                        <h1 class="coffee__numeral">900</h1>
+                        <h2 class="coffee__text">We launched</h2>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+
+        <!--Posts-->
+        <div class="posts">
+       	    <div class="container">
+       	    	<div class="posts__inner">
+       	    		<div class="posts__name">
+       	    			<h1 class="posts__title">Recent Posts.</h1>
+       	    			<h2 class="posts__text">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</h2>
+       	    		</div>
+       	    		<div class="posts__visual">
+       	    			<div class="posts__item">
+       	    				<img src="images/posts/photo1.jpg">
+       	    				<div class="posts__cm">
+       	    				    <div class="posts__circle">30</div>
+       	    				    <div class="posts__month">Sep.</div>
+       	    				</div>
+       	    				<div class="posts__filter"></div>
+       	    				<div class="posts__block">
+       	    					<h1 class="posts__block__title">Lorem ipsum dolor sit amet</h1>
+       	    					<h2 class="posts__block__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</h2>
+       	    					<a  class="posts__block__link"href="">
+       	    					    <div class="posts__block__read">
+       	    						    <h3 class="posts__read">Read More</h3>
+       	    					        <div class="posts__pyramid"></div>
+       	    					    </div> 
+       	    					</a>    			
+       	    				</div>
+       	    			</div>
+       	    			<div class="posts__item">
+       	    				<img src="images/posts/photo2.jpg">
+       	    				<div class="posts__cm">
+       	    				    <div class="posts__circle">30</div>
+       	    				    <div class="posts__month">Sep.</div>
+       	    				</div>
+       	    				<div class="posts__filter"></div>
+       	    				<div class="posts__block">
+       	    					<h1 class="posts__block__title">Lorem ipsum dolor sit amet</h1>
+       	    					<h2 class="posts__block__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</h2>
+       	    					<a  class="posts__block__link"href="">
+       	    					    <div class="posts__block__read">
+       	    						    <h3 class="posts__read">Read More</h3>
+       	    					        <div class="posts__pyramid"></div>
+       	    					    </div> 
+       	    					</a>
+       	    				</div>
+       	    			</div>
+       	    			<div class="posts__item">
+       	    				<img src="images/posts/photo3.jpg">
+       	    				<div class="posts__cm">
+       	    				    <div class="posts__circle">30</div>
+       	    				    <div class="posts__month">Sep.</div>
+       	    				</div>
+       	    				<div class="posts__filter"></div>
+       	    				<div class="posts__block">
+       	    					<h1 class="posts__block__title">Lorem ipsum dolor sit amet</h1>
+       	    					<h2 class="posts__block__text">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</h2>
+       	    					<a  class="posts__block__link"href="">
+       	    					    <div class="posts__block__read">
+       	    						    <h3 class="posts__read">Read More</h3>
+       	    					        <div class="posts__pyramid"></div>
+       	    					    </div> 
+       	    					</a>
+       	    				</div>
+       	    			</div>
+       	    		</div>
+       	    	</div>
+       	    </div>
+        </div>
+
+        
+        <!--Logo-->
+        <div class="logo">
+        	<div class="container">
+        		<div class="logo__inner">
+        			<div class="logo__item">
+        				<img src="images/logo/logo1.png">
+        			</div> 
+        			<div class="logo__item">
+        				<img src="images/logo/logo2.png">
+        			</div>
+        			<div class="logo__item">
+        				<img src="images/logo/logo3.png">
+        			</div>
+        			<div class="logo__item">
+        				<img src="images/logo/logo4.png">
+        			</div>
+        		</div>
+        	</div>
+        </div>
+
+        <!--Contact-->
+        <div class="contact">
+        	<div class=" container">
+        		<div class="contact__inner">
+
+        			<!--BLOCK__1-->
+        			<div class="contact__atom contact__waxom">
+        				<div class="contact__logo">
+        					<img src="images/contact/logo.png">
+        					<div class="contact__l">Waxom</div> 
+        				</div>
+        				<h2 class="contact__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci suscipit lobortis claritatem.</h2>
+        				<div class="contact__block__read">
+        				    <h3 class="contact__read">Read More</h3>
+        				    <div class="contact__pyramid"></div>
+        				</div>
+        			</div>
+
+        			<!--BLOCK__2-->
+                    <div class="contact__atom contact__posts">   
+                    	<h1  class="contact__name">Recent Posts</h1>
+                    	<div class='contact__posts__atom'>
+        				<h3 class='contact__posts__date'>September 08, 2015</h3>
+        				<h2 class='contact__posts__text'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</h2>
+        				</div>
+        				<div class='contact__posts__atom'>
+        				<h3 class='contact__posts__date'>September 08, 2015</h3>
+        				<h2 class='contact__posts__text'>Diam nonummy nibh euismod tincidunt ut laoreet dolore magna</h2>
+        				</div>
+        				<div class='contact__posts__atom'>
+        				<h3 class='contact__posts__date'>September 08, 2015</h3>
+        				<h2 class='contact__posts__text'>Claritas est etiam processus dynamicus, qui sequitur mutationem per seacula quarta decima</h2>
+        				</div>
+        			</div>
+
+        			<!--BLOCK__3-->
+        			<div class="contact__atom contact__twiter">
+        			<h1  class="contact__name">Our Twitter</h1>
+                    <div class='contact__twiter__atom'>
+        				<h2 class='contact__twiter__text'>
+        					<a href="">@waxom</a>
+        				Cum soluta nobis eleifend option congue nihil imperdiet doming</h2>
+        				<h3 class='contact__twiter__date'>3 mins ago</h3>
+        			</div>
+        			<div class='contact__twiter__atom'>
+        				<h2 class='contact__twiter__text'>Mirum est
+        					<a href="">#envato</a> 
+        				notare quam littera gothica, quam nunc putamus parum anteposuerit litterarum</h2>
+        				<h3 class='contact__twiter__date'>5 hours ago</h3>
+        			</div>
+        			<div class='contact__twiter__atom'>
+        				<h2 class='contact__twiter__text'>Soluta nobis option 
+        					<a href="">bit.ly/1Hniso7</a>
+        				</h2>
+        				<h3 class='contact__twiter__date'>20 days ago</h3>
+        			</div>
+
+        			</div>
+
+        			<!--BLOCK__4-->	
+        			<div class="contact__atom contact__widget">  
+        			    
+        				<h1 class="contact__name">Dribbble Widget</h1>
+        				<div class="contact__widget__inner">
+        				    <div class="contact__widget__img">
+        					   <img src="images/contact/widget1.png">
+        				    </div>
+        				    <div class="contact__widget__img">
+        					    <img src="images/contact/widget2.png">
+        				    </div>
+        				    <div class="contact__widget__img">
+        					    <img src="images/contact/widget3.png">
+        				    </div>
+        				    <div class="contact__widget__img">
+        					    <img src="images/contact/widget4.png">
+        				    </div>
+        				</div>
+        			</div>
+        		</div>		
+        	</div>
+        </div>
+
+        <!--Footer-->
+        <div class="footer">
+        	<div class="container">
+        		<div class="footer__inner">
+        			<div class="footer__start">
+        				<a class="footer__ssilka" href="">Copyright © 2015 
+        					<span>Waxom</span></a>
+        				<a class="footer__ssilka" href="">Privacy Policy</a>
+        				<a class="footer__ssilka" href="">FAQ</a>
+        				<a  class="footer__ssilka"href="">Support</a>
+        			</div>
+        			<div class="footer__end">
+        				<a class="footer__ssilka" href="">Designed by <span>ThemeFire</span> </a>
+        				<a class="footer__ssilka" href="">Only on <span>Envato Market</span> </a>
+        			</div>
+        		</div>
+        	</div>       	
+        </div>
+        <!--Слайдер-->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script><!--JS-->
+        <script src="app.js"></script>
+</body>
+</html>
